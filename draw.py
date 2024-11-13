@@ -134,12 +134,12 @@ def capture_window():
     if file_name is None:
         return
  
-    file_type = simpledialog.askstring("Filetype", "Enter available file type (png, jpg, jpeg):", initialvalue="png")
+    file_type = simpledialog.askstring("Filetype", "Enter available file type (png, jpeg):", initialvalue="png")
     if file_type is None:
         return
    
     file_type = file_type.lower()
-    valid_file_types = ["png", "jpg", "jpeg"]
+    valid_file_types = ["png", "jpeg"]
  
     if file_type not in valid_file_types:
         messagebox.showerror("Invalid file type", f"'{file_type}' is not a supported filetype.")
